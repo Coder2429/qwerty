@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main  # или master, в зависимости от вашей основной ветки
-    paths:
-      - 'frontend/**'
   workflow_dispatch:
 
 permissions:
@@ -44,9 +42,8 @@ jobs:
         env:
           # Замените на URL вашего VPS бекенда
           VITE_API_URL: ${{ secrets.VITE_API_URL || 'https://your-vps-domain.com' }}
-          # Если репозиторий не в корне, укажите BASE_PATH
-          # Например, если репозиторий называется "Vkbot", то BASE_PATH будет "/Vkbot/"
-          BASE_PATH: ${{ secrets.BASE_PATH || '/' }}
+          # Для репозитория "qwerty" BASE_PATH должен быть "/qwerty/"
+          BASE_PATH: ${{ secrets.BASE_PATH || '/qwerty/' }}
         run: npm run build
 
       - name: Setup Pages

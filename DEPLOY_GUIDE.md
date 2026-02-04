@@ -36,7 +36,7 @@
 
 1. Перейдите в **Settings** → **Secrets and variables** → **Actions**
 2. Добавьте следующие секреты:
-   - `VITE_API_URL` - URL вашего бекенда на VPS (например: `https://api.yourdomain.com` или `http://your-vps-ip:5000`)
+   - `VITE_API_URL` - URL вашего бекенда на VPS (например: `https://api.yourdomain.com` или `http://176.117.76.227:5000`)
    - `BASE_PATH` - базовый путь для GitHub Pages (если репозиторий не в корне, например: `/Vkbot/`)
 
 ### Шаг 4: Активация деплоя
